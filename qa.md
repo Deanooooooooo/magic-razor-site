@@ -10,3 +10,9 @@
 - Map/local SEO: PASS local block directly above footer with one visible navigation CTA and iframe embed.
 - Responsive/footer icon QA: PASS by code inspection; unified SVG icon buttons, no text badges.
 - Final live QA: PASS — live URL returned HTTP 200; HTML contains business name, testimonial phrase, schema, canonical, OG tags, map iframe, and no `reviewCount`.
+
+## 2026-05-30 image-quality correction
+- Replaced cluttered/watermarked interior hero with cleaner hair-result photo.
+- Removed weak/watermarked product/interior image from visible gallery.
+- Gallery reduced to selected hair-result images only; no duplicate visible image srcs.
+- Map iframe changed to eager load for better visual QA.
