@@ -9,4 +9,4 @@
 - Hours: PARTIAL — Google Maps preview exposed only current Saturday hours; full weekly hours not reliably accessible, so no hours section/schema was published.
 - Map/local SEO: PASS local block directly above footer with one visible navigation CTA and iframe embed.
 - Responsive/footer icon QA: PASS by code inspection; unified SVG icon buttons, no text badges.
-- Final live QA: pending deploy.
+- Final live QA: PASS — live URL returned HTTP 200; HTML contains business name, testimonial phrase, schema, canonical, OG tags, map iframe, and no `reviewCount`.
