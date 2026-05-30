@@ -3,3 +3,4 @@
 .hero-media img{filter:saturate(.98) contrast(1.04)}
 @media(max-width:760px){.gallery.polished{grid-template-columns:1fr 1fr}.gallery.polished img{aspect-ratio:3/4}}
 @media(max-width:760px){.gallery.polished{grid-template-columns:1fr}.gallery.polished img{aspect-ratio:4/5;width:100%}}
+@media(max-width:760px){.map-block iframe{display:none}.map-block{grid-template-columns:1fr}.map-block>div{border-radius:24px}}

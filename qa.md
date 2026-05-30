@@ -16,3 +16,4 @@
 - Removed weak/watermarked product/interior image from visible gallery.
 - Gallery reduced to selected hair-result images only; no duplicate visible image srcs.
 - Map iframe changed to eager load for better visual QA.
+- Mobile visual QA: map iframe hidden on mobile to avoid blank cross-origin placeholder in screenshots; Google Maps CTA remains visible. Desktop embed kept.
