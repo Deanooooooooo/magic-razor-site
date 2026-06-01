@@ -2,3 +2,46 @@
 .hero-media img{filter:saturate(.98) contrast(1.04)}
 @media(max-width:760px){.gallery.polished{grid-template-columns:1fr}.gallery.polished img,.gallery.polished img.feature,.gallery.polished img:nth-child(4){grid-column:auto;grid-row:auto;aspect-ratio:auto;height:auto;width:100%;object-fit:contain}}
 @media(max-width:760px){.map-block iframe{display:none}.map-block{grid-template-columns:1fr}.map-block>div{border-radius:24px}}
+
+/* Image layout repair: preserve real photo aspect ratios on desktop and mobile. */
+:is(.result-gallery,.gallery-grid,.results-grid,.portfolio-grid,.gallery,.masonry){
+  columns:3 240px !important;
+  column-gap:18px !important;
+  display:block !important;
+  grid-template-columns:none !important;
+  grid-auto-rows:auto !important;
+  align-items:start !important;
+}
+:is(.result-gallery,.gallery-grid,.results-grid,.portfolio-grid,.gallery,.masonry) > :is(img,figure,.result-card,.portfolio-card){
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  object-fit:unset !important;
+  break-inside:avoid !important;
+  margin:0 0 18px !important;
+  grid-column:auto !important;
+  grid-row:auto !important;
+}
+:is(.result-gallery,.gallery-grid,.results-grid,.portfolio-grid,.gallery,.masonry) img{
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center !important;
+}
+:is(.result-gallery,.gallery-grid,.results-grid,.portfolio-grid,.gallery,.masonry) figcaption{
+  max-width:calc(100% - 24px);
+}
+@media (max-width:900px){
+  :is(.result-gallery,.gallery-grid,.results-grid,.portfolio-grid,.gallery,.masonry){columns:2 160px !important;column-gap:12px !important}
+  :is(.result-gallery,.gallery-grid,.results-grid,.portfolio-grid,.gallery,.masonry) > :is(img,figure,.result-card,.portfolio-card){margin-bottom:12px !important}
+}
+@media (max-width:560px){
+  :is(.result-gallery,.gallery-grid,.results-grid,.portfolio-grid,.gallery,.masonry){columns:1 !important}
+}
+
